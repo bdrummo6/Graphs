@@ -3,12 +3,14 @@ Simple graph implementation
 """
 from util import Stack, Queue  # These may come in handy
 
+# Part 1: Graph Class
 class Graph:
 
     """Represent a graph as a dictionary of vertices mapping labels to edges."""
     def __init__(self):
         self.vertices = {}
 
+    # Part 1: Graph Class
     def add_vertex(self, vertex_id):
         """
         Add a vertex to the graph.
@@ -19,6 +21,7 @@ class Graph:
             # Adds the vertex to the graph if it does not exist
             self.vertices[vertex_id] = set()
 
+    # Part 1: Graph Class
     def add_edge(self, v1, v2):
         """
         Add a directed edge to the graph.
@@ -30,12 +33,14 @@ class Graph:
         else:
             raise IndexError('That vertex does not exist!')
 
+    # Part 1: Graph Class
     def get_neighbors(self, vertex_id):
         """
         Get all neighbors (edges) of a vertex.
         """
         return self.vertices[vertex_id]
 
+    # Part 2: Implement Breadth-First Traversal
     def bft(self, starting_vertex):
         """
         Print each vertex in breadth-first order
@@ -60,6 +65,7 @@ class Graph:
                     # Add the next edge to the queue
                     q.enqueue(next_vertex)
 
+    # Part 3: Implement Depth-First Traversal with a Stack
     def dft(self, starting_vertex):
         """
         Print each vertex in depth-first order
@@ -85,6 +91,7 @@ class Graph:
                     # Push the next edge onto the stack
                     s.push(next_vertex)
 
+    # Part 4: Implement Depth-First Traversal using Recursion
     def dft_recursive(self, starting_vertex, visited=None):
         """
         Print each vertex in depth-first order
@@ -106,6 +113,7 @@ class Graph:
                 # make a recursive call
                 self.dft_recursive(vertex, visited)
 
+    # Part 5: Implement Breadth-First Search
     def bfs(self, starting_vertex, destination_vertex):
         """
         Return a list containing the shortest path from
@@ -140,6 +148,7 @@ class Graph:
                     new_path.append(next_vertex)
                     q.enqueue(new_path)
 
+    # Part 6: Implement Depth-First Search
     def dfs(self, starting_vertex, destination_vertex):
         """
         Return a list containing a path from
@@ -173,6 +182,7 @@ class Graph:
                     new_path.append(next_vertex)
                     s.push(new_path)
 
+    # Part 7: Implement Depth-First Search using Recursion
     def dfs_recursive(self, starting_vertex, destination_vertex, visited=None, path=None):
         """
         Return a list containing a path from
