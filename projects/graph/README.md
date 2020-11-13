@@ -61,7 +61,7 @@ graph.add_edge('0', '4')  # No '4' vertex, should raise an Exception!
 
 ## Part 5: Implement Breadth-First Search
 
-Write a function within your Graph class that takes takes a starting node and a destination node as an argument, then performs BFS. Your function should return the shortest path from the start node to the destination node. Note that there are multiple valid paths.
+- [X] Write a function within your Graph class that takes takes a starting node and a destination node as an argument, then performs BFS. Your function should return the shortest path from the start node to the destination node. Note that there are multiple valid paths.
 
 ## Part 6: Implement Depth-First Search
 
