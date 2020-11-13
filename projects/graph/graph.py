@@ -55,6 +55,7 @@ class Graph:
                 print(vertex)
                 # also add vertex to visited
                 visited.add(vertex)
+                # for each edge of the vertex
                 for next_vertex in self.get_neighbors(vertex):
                     # Add the next edge to the queue
                     q.enqueue(next_vertex)
@@ -64,7 +65,25 @@ class Graph:
         Print each vertex in depth-first order
         beginning from starting_vertex.
         """
-        pass  # TODO
+        # Instantiate an empty stack and then push the starting_vertex onto it
+        s = Stack()
+        s.push(starting_vertex)
+        # Create a node to track the nodes visited in the graph
+        visited = set()
+        # loop through the graph as long as the stack is not empty
+        while s.size() > 0:
+            # Pop the node off the top of the stack
+            vertex = s.pop()
+            # Check if visited contains the current contents of vertex
+            if vertex not in visited:
+                # if visited does not contain the current contents of vertex then print vertex
+                print(vertex)
+                # also add vertex to visited_node
+                visited.add(vertex)
+                # for each edge of the vertex
+                for next_vertex in self.get_neighbors(vertex):
+                    # Push the next edge onto the stack
+                    s.push(next_vertex)
 
     def dft_recursive(self, starting_vertex):
         """
