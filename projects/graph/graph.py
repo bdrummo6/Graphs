@@ -13,13 +13,22 @@ class Graph:
         """
         Add a vertex to the graph.
         """
-        pass  # TODO
+        if vertex_id in self.vertices:
+            print('That vertex already exists!')
+        else:
+            # Adds the vertex to the graph if it does not exist
+            self.vertices[vertex_id] = set()
 
     def add_edge(self, v1, v2):
         """
         Add a directed edge to the graph.
         """
-        pass  # TODO
+        # Stretch: Checks if v1 and v2 exist in the graph
+        if v1 in self.vertices and v2 in self.vertices:
+            # if both add a directed edge to the graph by connecting v1 to v2
+            self.vertices[v1].add(v2)
+        else:
+            raise IndexError('That vertex does not exist!')
 
     def get_neighbors(self, vertex_id):
         """
@@ -75,6 +84,20 @@ class Graph:
         This should be done using recursion.
         """
         pass  # TODO
+
+"""
+graph = Graph()  # Instantiate your graph
+graph.add_vertex('0')
+graph.add_vertex('1')
+graph.add_vertex('2')
+graph.add_vertex('3')
+graph.add_edge('0', '1')
+graph.add_edge('1', '0')
+graph.add_edge('0', '3')
+graph.add_edge('3', '0')
+print(graph.vertices)
+"""
+
 
 if __name__ == '__main__':
     graph = Graph()  # Instantiate your graph
