@@ -65,8 +65,7 @@ graph.add_edge('0', '4')  # No '4' vertex, should raise an Exception!
 
 ## Part 6: Implement Depth-First Search
 
-Write a function within your Graph class that takes takes a starting node and a destination node as an argument, then performs DFS. Your function should return a valid path (not necessarily the shortest) from the start node to the destination node. Note that there are multiple valid paths.
-
+- [X] Write a function within your Graph class that takes takes a starting node and a destination node as an argument, then performs DFS. Your function should return a valid path (not necessarily the shortest) from the start node to the destination node. Note that there are multiple valid paths.
 
 ## Part 7: Implement Depth-First Search using Recursion
 
