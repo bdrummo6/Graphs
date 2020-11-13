@@ -57,7 +57,7 @@ graph.add_edge('0', '4')  # No '4' vertex, should raise an Exception!
 
 ## Part 4: Implement Depth-First Traversal using Recursion
 
-Write a function within your Graph class that takes takes a starting node as an argument, then performs DFT using recursion. Your function should print the resulting nodes in the order they were visited. Note that there are multiple valid paths that may be printed.
+- [X] Write a function within your Graph class that takes takes a starting node as an argument, then performs DFT using recursion. Your function should print the resulting nodes in the order they were visited. Note that there are multiple valid paths that may be printed.
 
 ## Part 5: Implement Breadth-First Search
 
