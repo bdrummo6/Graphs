@@ -15,11 +15,8 @@ class Graph:
         """
         Add a vertex to the graph.
         """
-        if vertex_id in self.vertices:
-            print('That vertex already exists!')
-        else:
-            # Adds the vertex to the graph if it does not exist
-            self.vertices[vertex_id] = set()
+        # Adds the vertex to the graph if it does not exist
+        self.vertices[vertex_id] = set()
 
     # Part 1: Graph Class
     def add_edge(self, v1, v2):
@@ -227,7 +224,6 @@ graph.add_edge('0', '3')
 graph.add_edge('3', '0')
 print(graph.vertices)
 """
-
 
 if __name__ == '__main__':
     graph = Graph()  # Instantiate your graph
